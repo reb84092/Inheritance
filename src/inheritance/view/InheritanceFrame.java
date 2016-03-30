@@ -1,11 +1,8 @@
 package inheritance.view;
 
 import java.awt.Container;
-
 import javax.swing.JFrame;
-
 import inheritance.controller.InheritanceController;
-
 import javax.swing.JOptionPane;
 
 public class InheritanceFrame extends JFrame

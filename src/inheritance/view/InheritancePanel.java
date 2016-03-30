@@ -10,6 +10,11 @@ import inheritance.model.DS;
 
 public class InheritancePanel extends JPanel
 {
+	private InheritanceController baseController;
+	private SpringLayout baseLayout;
+	private JComboBox<String> phraseComboBox;
+	private int maxClicks;
+	private int startClick;
 	
 	public InheritancePanel(InheritanceController baseController)
 	{
