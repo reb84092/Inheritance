@@ -4,7 +4,7 @@ package inheritance.model;
  * @author rbar3155
  */
 
-public abstract class DS implements GroupsOfFour
+public abstract class DS implements GroupsOfFour, Comparable
 {
 	
 	//Three Data Members
