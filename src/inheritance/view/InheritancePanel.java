@@ -15,6 +15,8 @@ public class InheritancePanel extends JPanel
 	private JComboBox<String> phraseComboBox;
 	private int maxClicks;
 	private int startClick;
+	private JTextArea theTextArea;
+	private JButton theButton;
 	
 	public InheritancePanel(InheritanceController baseController)
 	{
