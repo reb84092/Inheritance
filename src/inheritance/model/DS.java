@@ -35,4 +35,14 @@ public abstract class DS implements GroupsOfFour, Comparable
 	}
 	private String girlsName;
 	private double girlsBirthdate;
+	public static void add(SH sh)
+	{
+		// TODO Auto-generated method stub
+		
+	}
+	public static void add(GG gg)
+	{
+		// TODO Auto-generated method stub
+		
+	}
 }
