@@ -6,10 +6,9 @@ public interface GroupsOfFour
 {
 
 	public String nameOfGroup();
-	
 	public String namesOfGroupMembers();
-	
 	public void sillyAction(int numberOfGroups);
+	public int compareTo(Object thing);
 	
 	
 }

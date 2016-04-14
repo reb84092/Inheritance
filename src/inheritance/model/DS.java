@@ -45,4 +45,19 @@ public abstract class DS implements GroupsOfFour, Comparable
 		// TODO Auto-generated method stub
 		
 	}
+	public static Object get(int secondLocation)
+	{
+		// TODO Auto-generated method stub
+		return null;
+	}
+	public static void set(int secondLocation, DS temp)
+	{
+		// TODO Auto-generated method stub
+		
+	}
+	public static int size()
+	{
+		// TODO Auto-generated method stub
+		return 0;
+	}
 }

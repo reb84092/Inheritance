@@ -4,6 +4,7 @@ import inheritance.model.DS;
 import inheritance.model.GG;
 import inheritance.model.SH;
 import java.util.ArrayList;
+import inheritance.model.GroupsOfFour;
 
 public class InheritanceController
 {
@@ -23,12 +24,50 @@ public class InheritanceController
 	
 	private void makeFourGirlsList()
 	{
-		DS.add(new SH());
-		DS.add(new GG());
+		fourGirls.add(new SH());
+		fourGirls.add(new GG());
 	}
+	
 	public void start()
 	{
 	
 	}
-
+	
+	private void swap(int firstLocation, int secondLocation)
+	{
+		DS temp = fourGirls.get(firstLocation);
+		fourGirls.set(firstLocation, fourGirls.get(secondLocation));
+		fourGirls.set(secondLocation, temp);
+	}
+	
+	public void insertionSort()
+	{
+		for(int outerLoop = 1; outerLoop < fourGirls.size(); outerLoop++)
+		{
+			int innerLoop = outerLoop;
+			while(innerLoop > 0 && (fourGirls.get(innerLoop-1).compareTo(fourGirls.get(innerLoop))) > 0)
+			{
+				swap(innerLoop, innerLoop-1);
+				innerLoop--;
+			}
+		}
+	}
+	
+	public void quicksort(int low, int high)
+	{
+		if(low < high)
+		{
+			int midPoint = partition(low, high);
+			quicksort(low, midPoint-1);
+			quicksort(midPoint+1, high);
+		}
+	}
+	
+	private int partition(int low, int high)
+	{
+		int partitionPoint = 0;
+		
+		
+		return partitionPoint;
+	}
 }
