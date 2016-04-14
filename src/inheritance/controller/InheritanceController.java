@@ -65,9 +65,19 @@ public class InheritanceController
 	
 	private int partition(int low, int high)
 	{
-		int partitionPoint = 0;
+		int position= low;
+		DS pivot = fourGirls.get(high);
 		
+		for(int spot = low; spot < high-1; spot++)
+		{
+			if(fourGirls.get(spot).compareTo(pivot) <= 0)
+			{
+				swap(position, spot);
+				position++;
+			}
+		}
+		swap(position, high);
 		
-		return partitionPoint;
+		return position;
 	}
 }
