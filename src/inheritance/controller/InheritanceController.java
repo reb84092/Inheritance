@@ -1,9 +1,14 @@
 package inheritance.controller;
 
+import inheritance.model.DPSN;
 import inheritance.model.DS;
 import inheritance.model.GG;
 import inheritance.model.SH;
+import inheritance.model.GroupsOfFour;
+import inheritance.model.SH;
+import inheritance.model.TM;
 import java.util.ArrayList;
+
 import inheritance.model.GroupsOfFour;
 
 public class InheritanceController
@@ -11,11 +16,12 @@ public class InheritanceController
 	public InheritanceController()
 	{
 		//build all model components
+		this.fourGirls = new ArrayList<GroupsOfFour>();
 		makeFourGirlsList();
 		//build view
 	}
 	
-	private ArrayList<DS> fourGirls;
+	private ArrayList<GroupsOfFour> fourGirls;
 	
 	public String showGirlsNames()
 	{
@@ -26,6 +32,10 @@ public class InheritanceController
 	{
 		fourGirls.add(new SH());
 		fourGirls.add(new GG());
+		fourGirls.add(new DPSN());
+		fourGirls.add(new TM());
+		
+		
 	}
 	
 	public void start()
@@ -35,7 +45,7 @@ public class InheritanceController
 	
 	private void swap(int firstLocation, int secondLocation)
 	{
-		DS temp = fourGirls.get(firstLocation);
+		GroupsOfFour temp = fourGirls.get(firstLocation);
 		fourGirls.set(firstLocation, fourGirls.get(secondLocation));
 		fourGirls.set(secondLocation, temp);
 	}
@@ -64,9 +74,10 @@ public class InheritanceController
 	}
 	
 	private int partition(int low, int high)
+
 	{
 		int position= low;
-		DS pivot = fourGirls.get(high);
+		GroupsOfFour pivot = fourGirls.get(high);
 		
 		for(int spot = low; spot < high-1; spot++)
 		{
@@ -80,4 +91,17 @@ public class InheritanceController
 		
 		return position;
 	}
+
+	public String showInformation()
+	{
+		String Information = "";
+		for(GroupsOfFour currentGroup : fourGirls)
+		{
+			Information += ("This must be " + currentGroup.toString() + "and is " + currentGroup.nameOfGroup() + "\n");
+		}
+		
+		return Information;
+	}
+
+	
 }

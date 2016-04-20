@@ -10,7 +10,6 @@ public interface GroupsOfFour
 	public void sillyAction(int numberOfGroups);
 	public int compareTo(Object thing);
 	
-	
 }
 	
 	

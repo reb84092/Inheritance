@@ -22,5 +22,18 @@ public class InheritancePanel extends JPanel
 	{
 		
 	}
-
+	
+	private void setupListeners()
+	{
+		theButton.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent click)
+			{
+				baseController.insertionSort();
+				
+				theTextArea.setText(baseController.showInformation());
+			
+			}
+		});
+	}
 }
